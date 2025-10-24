@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "obsidian-domain-image-sorter",
+	"name": "Domain Image Sorter",
 	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
-	"isDesktopOnly": false
+	"minAppVersion": "1.4.0",
+	"description": "Downloads images and maps domains to image destination folders. Intended to be used with the Obsidian Web Clipper.",
+	"author": "BDZendure",
+	"authorUrl": "https://github.com/BDZendure",
+	"isDesktopOnly": true
 }
