@@ -29,7 +29,7 @@ You can add and delete domain-imagefolder mappings in the settings tab.
 
 **Example Folder Mapping**
 
-| **Source** | **Image Destination** |
+| **Domain** | **Image folder** |
 |-------------|------------------------|
 | `goodreads.com` | `images/book-images/` |
 | `novelupdates.com` | `images/webnovel-images/` |
