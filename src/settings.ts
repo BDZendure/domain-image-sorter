@@ -35,7 +35,7 @@ export class SettingsTab extends PluginSettingTab {
 
 		// header cells inside the same grid
 		mappingsArea.createEl("div", { text: "Domain", cls: "dis-col-head" });
-		mappingsArea.createEl("div", { text: "Image Folder", cls: "dis-col-head" });
+		mappingsArea.createEl("div", { text: "Image folder", cls: "dis-col-head" });
 		mappingsArea.createEl("div", { text: "", cls: "dis-col-head" });
 		
 		// divider between header and first mapping
@@ -123,7 +123,7 @@ export class SettingsTab extends PluginSettingTab {
 		//ADD MAPPING BUTTON
 		new Setting(containerEl)
 			.addButton(b => b
-				.setButtonText("Add Mapping")
+				.setButtonText("Add mapping")
 				.onClick(async () => {
 					this.plugin.settings.mappings.push({ domain: "", folder: "" });
 					await this.plugin.saveSettings();
@@ -173,7 +173,7 @@ export class SettingsTab extends PluginSettingTab {
 		let currentItems: HTMLDivElement[] = [];
 
 		//returns a sorted array of folder path strings suitable for suggestion
-		const getAllFolderPaths = (): string[] => (this.app.vault.getAllLoadedFiles() as any[])
+		const getAllFolderPaths = (): string[] => (this.app.vault.getAllLoadedFiles() as any[]) //any obsidian file path method ?
 			.filter(f => f instanceof TFolder)
 			.map((f: TFolder) => f.path)
 			.filter(p => p && p !== '.')
@@ -205,6 +205,7 @@ export class SettingsTab extends PluginSettingTab {
 		//Apply selection, save data, and hide the list
 		const selectItem = async (div: HTMLDivElement | undefined) => {
 			if (!div) return;
+
 			const value = div.getAttribute('data-path')!;
 			inputEl.value = value;
 			this.plugin.settings.mappings[ruleIndex].folder = value;
@@ -326,3 +327,9 @@ export class SettingsTab extends PluginSettingTab {
 function escapeHtml(s: string) {
     return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
+
+
+//TODO
+/*
+- move hardcoded styling to separate CSS file
+*/
