@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-domain-image-sorter",
 	"name": "Domain Image Sorter",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "1.4.0",
 	"description": "Downloads images and maps domains to image destination folders. Intended to be used with the Obsidian Web Clipper.",
 	"author": "BDZendure",
