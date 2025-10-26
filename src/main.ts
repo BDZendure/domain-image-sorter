@@ -148,8 +148,9 @@ export default class DomainImageSorter extends Plugin {
 	private extractDomain(link: string): string {
 		try {
 			if (!link) return '';
-			const u = new URL(link, 'http://example');
-			return u.hostname.replace(/^www\./, '');
+			const url = new URL(link, 'http://example'); //through URL API
+			const domain = url.hostname;
+			return domain.replace(/^www\./, '');
 		} catch (e) {
 			return '';
 		}

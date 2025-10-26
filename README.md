@@ -1,7 +1,6 @@
 # Domain Image Sorter
 
-An Obsidian plugin that automatically downloads and organizes image attachments based on the source domain of clipped notes.  
-It is intended to work alongside [Obsidian Web Clipper](https://obsidian.md/clipper). It's also nice to have **Obsidan Bases**.
+An Obsidian plugin that automatically downloads and organizes image attachments based on the source domain of clipped notes. It is intended to work alongside [Obsidian Web Clipper](https://obsidian.md/clipper). It's also nice to have **Obsidan Bases**.
 
 ## Usage
 
@@ -58,7 +57,6 @@ npm install
 npm run build
 ```
 
-3. Open Obsidian → Settings → Community Plugins → Installed Plugins
-Find Domain Image Sorter and toggle it on.
+3. Open Obsidian → Settings → Community Plugins → Installed Plugins → Find Domain Image Sorter and toggle it on.
 4. Restart Obsidian
 

@@ -1,0 +1,98 @@
+.domain-image-sorter-mappings {
+	/* stack rows vertically */
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 6px 14px;
+}
+
+/* 3 col grid, 2 textboxes and delete button */
+.dis-row {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 160px);
+	column-gap: 8px;
+	align-items: center;
+}
+
+/* Allow row children to shrink within their grid cell */
+.dis-row > * { min-width: 0; }
+
+.dis-col-head {
+	font-weight: 600;
+	padding: 6px 6px;
+}
+
+.dis-header-divider {
+	width: 100%;
+	border-top: 1px solid var(--background-modifier-border);
+	margin: 6px 0 12px 0;
+}
+
+.dis-cell {
+	padding: 10px 6px;
+	/* Ensure cell contents can shrink inside the grid cell */
+	min-width: 0;
+}
+
+.dis-input {
+	width: 100%;
+	height: 34px;
+	padding: 8px;
+	box-sizing: border-box;
+	font-size: 13px;
+	min-width: 0;
+}
+
+.dis-action-cell {
+	display: flex;
+	align-items: center;
+	padding: 10px 6px;
+	justify-content: center;
+}
+
+.dis-divider {
+	width: 100%;
+	border-top: 1px solid var(--background-modifier-border);
+	margin: 10px 0;
+}
+
+.dis-folder-wrapper {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	min-width: 0;
+}
+
+.dis-folder-suggest {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	margin-top: 4px;
+	background: var(--background-primary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+	padding: 4px 0;
+	z-index: 999;
+	max-height: 240px;
+	overflow-y: auto;
+	display: none;
+	font-size: 13px;
+}
+
+.dis-folder-suggest-item {
+	padding: 6px 10px;
+	cursor: pointer;
+	font-size: 14px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.dis-folder-suggest-item.is-active {
+	background: var(--background-modifier-hover);
+}
+
